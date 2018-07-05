@@ -533,7 +533,7 @@
 	        		<div class="row">
         		<?php endif; ?>
  				
-				<div class="small-12 medium-4 columns">
+				<div class="small-12 medium-4 columns blog-section">
 					<article class="blog-preview">
 					<div class="article-header">
 						<a href="<?php the_permalink(); ?>">

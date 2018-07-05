@@ -85,8 +85,15 @@ body.loading {
 }
 
 .row .columns {
-	padding-right: 2rem;
-	padding-left: 2rem;
+	padding-right: 3rem;
+	padding-left: 3rem;
+}
+
+@media screen and (max-width: 40rem){
+	.row .columns {
+		padding-right: 0.625rem;
+		padding-left: 0.625rem;
+	}
 }
 
 .row-fluid {
@@ -597,6 +604,26 @@ color: #fff;
 
 .fixed-download-links .download-buttons-container .fixed-download-button .pdf-icon {
 	padding-right: 5px;
+}
+
+@media screen and (max-width: 40rem) {
+	.fixed-download-links {
+		top: auto;
+		bottom: -5px;
+		transform: none;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.fixed-download-links .download-buttons-container {
+		display: inline-flex;
+		flex-wrap: nowrap;
+		width: 100%;
+	}
+
+	.fixed-download-links .download-buttons-container .fixed-download-button {
+		display: inline-flex;
+	}
 }
 
 
