@@ -356,6 +356,9 @@
                <h2 class="section-title wow fadeIn text-center" data-wow-delay="0.4s">Token Sale</h2>
                <h3 class="section-subtitle wow fadeIn text-center" data-wow-delay="0.4s"> Details</h3>
                   <div class="table-container wow fadeInUp">
+                    
+                    <?php $token_table = get_field('token_sale_table'); ?>
+                    
                      <table>  
                         <tbody>
       							<tr>
@@ -365,42 +368,42 @@
       							</tr>
       							<tr>
       								<th>Start date</th>
-      								<td>25th July 2018</td>
-      								<td>29th August 2018</td>
+      								<td><?php echo $token_table['start_date_pre_sale']; ?></td>
+      								<td><?php echo $token_table['start_date_ico']; ?></td>
       							</tr>
       							<tr>
       								<th>End date</th>
-      								<td>25th August 2018</td>
-      								<td>29th September 2018</td>
+      								<td><?php echo $token_table['end_date_pre_sale']; ?></td>
+      								<td><?php echo $token_table['end_date_ico']; ?></td>
       							</tr>
       							<tr>
       								<th>Bonus</th>
-      								<td>30%</td>
-      								<td>0%</td>
+      								<td><?php echo $token_table['bonus_pre_sale']; ?></td>
+      								<td><?php echo $token_table['bonus_ico']; ?></td>
       							</tr>
       							<tr>
       								<th>Soft CAP</th>
-      								<td colspan="2" class="medium-text-center">3,000,000 €</td>
+      								<td colspan="2" class="medium-text-center"><?php echo $token_table['soft_cap']; ?></td>
       							</tr>
       							<tr>
       								<th>Hard CAP</th>
-      								<td colspan="2" class="medium-text-center">13,000,000 €</td>
+      								<td colspan="2" class="medium-text-center"><?php echo $token_table['hard_cap']; ?></td>
       							</tr>
       							<tr>
       								<th>Exchange Rate</th>
-      								<td colspan="2" class="medium-text-center">1 YMZ = 0.1 €</td>
+      								<td colspan="2" class="medium-text-center"><?php echo $token_table['exchange_rate']; ?></td>
       							</tr>
       							<tr>
       								<th>Available Currencies</th>
-      								<td colspan="2" class="medium-text-center">ETH</td>
+      								<td colspan="2" class="medium-text-center"><?php echo $token_table['available_currencies']; ?></td>
       							</tr>
       							<tr>
       								<th>Min. Contribution</th>
-      								<td colspan="2" class="medium-text-center">0.1 ETH</td>
+      								<td colspan="2" class="medium-text-center"><?php echo $token_table['minimum_contribution']; ?></td>
       							</tr>
       							<tr>
       								<th>Max. Contribution</th>
-      								<td colspan="2" class="medium-text-center">Unlimited (AML & KYC apply)</td>
+      								<td colspan="2" class="medium-text-center"><?php echo $token_table['maximum_contribution']; ?></td>
       							</tr>
       						</tbody>
       					</table>
