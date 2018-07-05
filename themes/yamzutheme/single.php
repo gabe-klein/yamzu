@@ -4,8 +4,6 @@
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-      <?php $social = get_field('team_member_social_platform'); ?>
-
         <article class="blog-post">
         <div class="row">
           <div class="columns small-12">
