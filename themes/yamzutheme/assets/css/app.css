@@ -335,6 +335,7 @@ header nav .header-row {
 	right: 0;
 	z-index: 20;
 	padding: 0;
+	outline: none;
 }
 
 @media screen and (min-width: 64rem){
