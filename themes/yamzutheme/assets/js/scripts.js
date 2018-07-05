@@ -19,3 +19,9 @@ menuLink.addEventListener("click", function() {
 	}
 
 });
+
+// Enable fontawesome on CSS pseudo elements 
+
+window.FontAwesomeConfig = {
+	searchPseudoElements: true
+}

@@ -1952,6 +1952,43 @@ screen and (min-width:64em) {
 	border-radius: 10px;
 }
 
+/* Social sharing */
+
+.blog-post-body .social-sharing {
+
+}
+
+.blog-post-body .social-sharing .ss-button-facebook,
+.blog-post-body .social-sharing .ss-button-twitter,
+.blog-post-body .social-sharing .ss-button-linkedin {
+	font-size: 0;
+	line-height: 0;
+}
+
+.blog-post-body .social-sharing .ss-button-facebook:before {
+	content: "\f082";
+	font-family: "Font Awesome 5 Brands";
+	font-size: 28px;
+	line-height: 28px;
+	padding-right: 1rem; 
+}
+
+.blog-post-body .social-sharing .ss-button-twitter:before {
+	content: "\f099";
+	font-family: "Font Awesome 5 Brands";
+	font-size: 28px;
+	line-height: 28px;
+	padding-right: 1rem; 
+}
+
+.blog-post-body .social-sharing .ss-button-linkedin:before {
+	content: "\f0e1";
+	font-family: "Font Awesome 5 Brands";
+	font-size: 28px;
+	line-height: 28px;
+	padding-right: 1rem; 
+}
+
 /* Team Single Page */
 
 
