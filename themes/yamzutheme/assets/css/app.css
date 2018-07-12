@@ -761,6 +761,13 @@ screen and (min-width:40em) {
  border-radius: 40px;
 }
 
+#market-overview .market-overview-content .cap .cap-bar .current-amount-text {
+ text-align: right;
+ padding-right: 0.75rem;
+ padding-top: 0.85rem;
+ white-space: nowrap;
+}
+
 #market-overview .market-overview-content .cap .focus-point {
  position: absolute;
  top: 30px;
@@ -1003,6 +1010,8 @@ screen and (min-width:40em) {
  bottom: -3px;
  left: -2.5px
 }
+
+
 
 @media screen and (max-width:767px) {
  #market-overview .market-overview-content .cap .focus-point .line {

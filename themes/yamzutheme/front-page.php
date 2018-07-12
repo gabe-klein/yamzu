@@ -52,19 +52,22 @@
 
             	<style>
             	
-            		@-webkit-keyframes increaseWidthCustom{from{width:0%}to{width:<?php echo $percentage; ?>%}}
-					@keyframes increaseWidthCustom{from{width:0%}to{width:<?php echo $percentage; ?>%}}
-					.increaseWidthCustom{-webkit-animation-name:increaseWidthCustom;animation-name:increaseWidthCustom}
-            		#market-overview .market-overview-content .cap .cap-bar {
-						width: <?php echo $percentage; ?>%; 
-					}
+            	@-webkit-keyframes increaseWidthCustom{from{width:0%}to{width:<?php echo $percentage; ?>%}}
+              @keyframes increaseWidthCustom{from{width:0%}to{width:<?php echo $percentage; ?>%}}
+              .increaseWidthCustom{-webkit-animation-name:increaseWidthCustom;animation-name:increaseWidthCustom}
+            	
+              #market-overview .market-overview-content .cap .cap-bar {
+                width: <?php echo $percentage; ?>%; 
+              }
 
             	</style>
                <div class="small-12 columns cap">
                   <div class="cap-bar-container">
                     <div class="cap-bar default-gradient-background wow increaseWidthCustom" data-wow-duration="2s" data-wow-delay="0">
+                      <p class="current-amount-text"><?php echo number_format($cap_details['current_amount']); ?> €</p>
                     </div>
                   </div>
+
                   <div class="focus-point first wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
                   	<div class="line wow showLine" data-wow-duration="1s" data-wow-delay="0.6s"></div>
                      <p>
@@ -72,6 +75,7 @@
                         <?php echo number_format($cap_details['left_funds']); ?> €
                      </p>
                   </div>
+
                   <div class="focus-point second wow fadeIn" data-wow-duration="1s" data-wow-delay="1.5s">
                      <div class="line line-hard wow showLine" data-wow-duration="1s" data-wow-delay="1.4s"></div>
                      <p>

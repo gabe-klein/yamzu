@@ -7,8 +7,8 @@
 			<?php 
 
 			$social = get_field('team_member_social_platform'); 
-			$prev_team_member = get_adjacent_post(false, '', true);
-			$next_team_member = get_adjacent_post(false, '', false);
+			$prev_team_member = get_adjacent_post(false, '', false);
+			$next_team_member = get_adjacent_post(false, '', true);
 
 
 			?>
