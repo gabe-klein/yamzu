@@ -2029,8 +2029,19 @@ screen and (min-width:64em) {
 	left: 0;
 }
 
+.team-single-flex-wrapper .team-member-nav-container .prev-team-member-link a {
+	padding-left: 1rem;
+	font-size: 2rem;
+}
+
 .team-single-flex-wrapper .team-member-nav-container .next-team-member-link {
 	right: 0;
+	text-align: right;
+}
+
+.team-single-flex-wrapper .team-member-nav-container .next-team-member-link a {
+	padding-right: 1rem;
+	font-size: 2rem;
 }
 
 @media screen and (max-width: 40rem) {
@@ -2066,7 +2077,9 @@ screen and (min-width:64em) {
 	}
 }
 
-
+.team-single {
+	margin: 6rem 1rem 1rem 1rem;
+}
 
 @media screen and (min-width: 40rem) {
 	.team-single {
