@@ -217,14 +217,14 @@
         <div class="roadmap-top-bg-image"></div>
         <div class="row">
             <div class="small-12 columns">
-               <h2 class="section-title text-center wow fadeIn" data-wow-duration="1s">Roadmap</h2>
+               <h2 class="section-title text-center wow fadeIn" data-wow-duration="1s"><?php the_field('roadmap_title'); ?></h2>
             </div>
          </div>
          <div class="row">
             <div class="small-12 large-offset-2 large-8 columns">
               <div class="roadmap-bg-past">
 
-               <h2 class="text-left wow fadeIn roadmap-subheading">The Past</h2>
+               <h2 class="text-left wow fadeIn roadmap-subheading"><?php the_field('roadmap_past_title'); ?></h2>
                
                <div class="cd-timeline js-cd-timeline">
                   <div class="cd-timeline__container">
@@ -251,7 +251,7 @@
              </div><!-- end roadmap-bg-past -->
              <div class="roadmap-bg-future">
               <div class="roadmap-bottom-bg-image"></div>
-               <h2 class="text-left wow fadeIn roadmap-subheading">The future</h2>
+               <h2 class="text-left wow fadeIn roadmap-subheading"><?php the_field('roadmap_future_title'); ?></h2>
                
                <div class="cd-timeline js-cd-timeline">
                   <div class="cd-timeline__container">
