@@ -774,7 +774,7 @@ screen and (min-width:40em) {
 }
 
 #market-overview .market-overview-content .cap .focus-point.first {
- left: 2rem;
+ left: 23%;
 }
 
 #market-overview .market-overview-content .cap .focus-point.second {
@@ -965,22 +965,11 @@ screen and (min-width:40em) {
 	}
 }
 
-#market-overview .market-overview-content .cap .focus-point.first p {
-	margin-left: 21.5vw;
-}
-
 #market-overview .market-overview-content .cap .focus-point .line {
  width: 1px;
  height: 60px;
  background-color: #fff;
- margin-left: 21.5vw;
  position: relative
-}
-
-@media screen and (max-width: 40em){
-	#market-overview .market-overview-content .cap .focus-point .line {
-		margin-left: 19vw;
-	}
 }
 
 #market-overview .market-overview-content .cap .focus-point .line.line-hard {
