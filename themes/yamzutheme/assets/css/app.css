@@ -766,6 +766,15 @@ screen and (min-width:40em) {
  padding-right: 0.75rem;
  padding-top: 0.85rem;
  white-space: nowrap;
+ font-size: 12px;
+ padding-left: 3px;
+}
+
+@media print,
+screen and (min-width:40em){
+	#market-overview .market-overview-content .cap .cap-bar .current-amount-text {
+		font-size: 16px;
+	}
 }
 
 #market-overview .market-overview-content .cap .focus-point {
@@ -784,13 +793,13 @@ screen and (min-width:40em) {
 #market-overview .market-overview-content .cap .focus-point p {
  text-align: right;
  margin-top: 10px;
- font-size: 12px
+ font-size: 12px;
 }
 
 @media print,
 screen and (min-width:40em) {
  #market-overview .market-overview-content .cap .focus-point p {
-	 font-size: 16px
+	 font-size: 16px;
  }
 }
 
@@ -1518,29 +1527,23 @@ screen and (min-width:40em) {
  }
 }
 
-.team-section-title {
- text-align: center;
- color: #b7d3ff;
- font-weight: 300;
- margin-top: 70px;
- margin-bottom: 45px
-}
-
-.team-department-title {
-	margin: 3rem 0;
-}
-
 .team-department-title, .team-member-title {
 	color: #e81f2a;
 	font-size: 1.5rem;
 }
 .team-member-title {
 	font-weight: 400;
+	margin-top: 0;
 }
 
 .team-member-name {
-	padding-top: 1rem;
 	font-size: 1.5rem;
+	margin-bottom: 0;
+}
+
+.team-member-department {
+	margin-bottom: 0;
+	padding-top: 1rem;
 }
 
 .team-member-container a {
@@ -1580,6 +1583,12 @@ screen and (min-width:40em) {
 	background-color: #e81f2a;
 }
 
+.team-member-title {
+
+}
+
+
+
 /* Custom team row */
 
 .team-row {
@@ -1587,13 +1596,38 @@ screen and (min-width:40em) {
 	flex-wrap: wrap;
 	width: 100%;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	margin-top: 1rem;
 }
 
 .team-element {
-	flex: 0 1 33.3%;
+	flex: 0 1 25%;
 	padding: 0 2rem 2rem 2rem;
+}
+
+@media screen and (max-width:1024px){
+	.team-element {
+		flex: 0 1 33.3333%;
+	}
+}
+
+@media screen and (max-width:770px){
+	.team-element {
+		flex: 0 1 50%;
+	}
+}
+
+@media screen and (max-width:570px){
+	.team-element {
+		flex: 0 1 50%;
+		padding: 2rem 0;
+	}
+}
+
+@media screen and (max-width:400px){
+	.team-element {
+		flex: 0 1 100%;
+	}
 }
 
 /* 8. Roadmap Section */
