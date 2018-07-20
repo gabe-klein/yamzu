@@ -2161,3 +2161,199 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .alignright { float: right; }
 .alignleft { float: left; }
 .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+/* Sales and Terms and Conditions Pages */
+
+.full-width-button {
+	text-align: center;
+	min-width: 230px;
+	margin: 1rem;
+}
+
+.sales-page-container {
+	min-height: 90vh;
+	text-align: center;
+	padding: 20vh 2rem;
+}
+
+.sales-page-container h1 {
+	font-size: 72px;
+	line-height: 88px;
+	margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 40rem){
+	.sales-page-container h1 {
+		font-size: 3rem;
+		line-height: 3rem;
+		margin-bottom: 2rem;
+	}
+}
+
+.terms-conditions-wrapper {
+	min-height: 70vh;
+	padding: 4rem 2rem;
+}
+
+.terms-conditions-text-box {
+	width: 100%;
+	max-height: 400px;
+	max-height: 40vh;
+	overflow-y: scroll;
+	border: 2px solid #fff;
+	border-radius: 20px;
+	padding: 2rem;
+	margin: 2rem 0;
+	background-color: #0e2248;
+}
+
+.accept-terms {
+	display: inline-flex;
+	flex-wrap: nowrap;
+	align-items: baseline;
+}
+
+.accept-terms input {
+	margin: 0;
+}
+
+.accept-terms label {
+	color: #fff;
+}
+
+html body .accept-button.disabled-default {
+	background: #ECECEC;
+	cursor: not-allowed;
+}
+
+.terms-button-wrapper {
+	text-align: center;
+}
+
+.payment-form-wrapper {
+	min-height: 70vh;
+	padding: 4rem 8rem;
+}
+
+@media screen and (max-width: 60rem){
+	.payment-form-wrapper {
+		padding: 4rem 2rem;
+	}
+}
+
+@media screen and (max-width: 40rem){
+	.payment-form-wrapper .gform_body input[type=text] {
+		width: 100%;
+	}	
+}
+
+
+.payment-form-wrapper .gform_body label {
+	color: #fff;
+}
+
+.payment-form-wrapper .gform_body input[type=text]{
+	background-color: #0e2248;
+	border: 2px solid #fff;
+	color: #fff;
+	border-radius: 20px;
+	padding: 0 1rem;
+}
+
+.payment-form-wrapper .gform_body .gfield_required {
+	color: #E81F2A;
+}
+
+/* Custom radio buttons */
+
+/* Overrides */
+.payment-form-wrapper .gform_wrapper .gfield_radio li label{
+	margin: 0;
+	padding: 0.5rem 1rem;
+}
+
+.ginput_container .gfield_radio li {
+	display: inline-block;
+}
+
+.gfield_radio {
+  margin: 0 0 1.5rem;
+  box-sizing: border-box;
+  font-size: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.gfield_radio input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -9999px;
+}
+
+.gfield_radio input + label {
+  margin: 0;
+  padding:  2rem;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  border: solid 1px #FFF;
+  background-color: transparent;
+  font-size: 1rem;
+  line-height: 140%;
+  font-weight: 600;
+  text-align: center;
+  transition: border-color .15s ease-out,  color .25s ease-out,  background-color .15s ease-out, box-shadow .15s ease-out;
+}
+
+.gfield_radio li:first-of-type input + label{
+  border-radius: 20px 0 0 20px;
+  border-right: none;
+}
+.gfield_radio li:last-of-type input + label {
+  border-radius: 0 20px 20px 0;
+  border-left: none;
+}
+.gfield_radio input:hover + label {
+  border-color: #213140;
+}
+.gfield_radio input:checked + label {
+  background-color: #E81F2A;
+  color: #FFF;
+  border-color: #FFF;
+  z-index: 1;
+}
+
+/* Default form style overrides */
+#field_1_5, #field_1_6 {
+	float: left;
+	clear: none;
+}
+
+#field_1_5 #input_1_5 {
+	min-width: 400px;
+}
+
+
+#input_1_6 {
+	padding: 0.5rem 0 0 2rem;
+}
+
+@media screen and (max-width: 800px){
+	#field_1_5 #input_1_5 {
+		min-width: 230px;
+	}
+}
+
+
+@media screen and (max-width: 550px){
+	#field_1_5 #input_1_5 {
+		min-width: 200px;
+	}
+
+	#input_1_6 {
+		padding: 0.5rem 0 0 0;
+	}
+}

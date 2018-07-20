@@ -7,7 +7,7 @@ get_header(); ?>
 <?php get_template_part( 'template-parts/documents', 'download' ); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	
+	<div id="particles-js"></div>
 	<div class="terms-conditions-wrapper">
 		<div class="row">
 			<div class="columns small-12">
@@ -15,10 +15,12 @@ get_header(); ?>
 				<div class="terms-conditions-text-box">
 					<?php the_field('terms_and_conditions'); ?>
 				</div>
-				<input name="terms" type="checkbox" value="accept" />
-				<label for="terms"><?php the_field('terms_and_conditions_acceptance_text'); ?></label>
+				<div class="accept-terms">
+					<input id="terms-box" name="terms-box" type="checkbox" value="accept" />
+					<label for="terms-box"><?php the_field('terms_and_conditions_acceptance_text'); ?></label>
+				</div>
 				<div class="terms-button-wrapper">
-					<a class="button full-width-button" href="<?php the_field('payment_form_link'); ?>"><?php the_field('link_text'); ?></a>
+					<a class="button full-width-button accept-button disabled-default" href="<?php the_field('payment_form_link'); ?>"><?php the_field('link_text'); ?></a>
 				</div>
 			</div>
 		</div>

@@ -7,7 +7,7 @@ get_header(); ?>
 <?php get_template_part( 'template-parts/documents', 'download' ); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	
+	<div id="particles-js"></div>
 	<div class="payment-form-wrapper">
 		<div class="row">
 			<div class="columns small-12">

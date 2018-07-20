@@ -26,5 +26,24 @@ window.FontAwesomeConfig = {
 	searchPseudoElements: true
 }
 
-// Manage 
-var paymentForm = document.querySelector(".payment-form-wrapper");
+$(document).ready(function(){
+
+	$("#terms-box").change(function(){
+		if($("#terms-box").prop("checked") === true) {
+			$(".accept-button").removeClass('disabled-default');
+		} else {
+			$(".accept-button").addClass('disabled-default');
+		}
+	});
+
+	$(".accept-button").click(function(e) {
+        if($("#terms-box").prop("checked") === false) {
+            e.preventDefault();
+            return false;
+        } else {
+            return true;
+        };
+    });
+
+});
+
