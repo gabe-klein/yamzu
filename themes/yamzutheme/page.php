@@ -15,8 +15,8 @@
               </div>
             </div>
 
-            <main class="blog-post-body">
-              <?php the_content(); ?>
+            <main>
+              
             </main>
 
           </div>
