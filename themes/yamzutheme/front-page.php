@@ -417,70 +417,104 @@
     	</section>
 
     	<section id="team" data-magellan-target="team">
-    		<div class="particles-bg"></div>
-    		<div class="row">
-    			<div class="small-12 columns">
-    				<h2 class="section-title text-center wow fadeIn" data-wow-duration="1s">Team</h2>
-    			</div>
-    		</div>
+    
+            <div class="particles-bg"></div>
+            
+            <div class="row">
+                <div class="small-12 columns">
+                    <h2 class="section-title text-center wow fadeIn" data-wow-duration="1s">Team</h2>
+                </div>
+            </div>
+            
+            <!-- Start custom query loop -->
+            <div class="team-row">
+            <?php
 
-    		<?php
+            /*
+            * Loop through Categories and Display Posts within
+            */
+            $post_type = 'team-members';
 
-        	// Custom Team loop
+            // Get all the taxonomies for this post type
+            $taxonomies = get_object_taxonomies( array( 'post_type' => $post_type ) );
 
-    		$post_type = 'team-members';
-    		$taxonomies = get_object_taxonomies( array( 'post_type' => $post_type ) );
+            foreach( $taxonomies as $taxonomy ) :
 
-    		$team_args = array(
-    			'post_type' => $post_type,
-    			'posts_per_page' => -1,
-    			'orderby'    => 'ID', 
-			    'order'      => 'ASC'
-    		);
+            // Gets every "category" (term) in this taxonomy to get the respective posts
+                $term_args = array(
+                    'orderby'    => 'slug', 
+                    'order'      => 'ASC',
+                );
+                $terms = get_terms( $taxonomy, $term_args );
 
-    		$team_posts = new WP_Query($team_args);
+                foreach( $terms as $term ) : ?>
 
-    		if( $team_posts->have_posts() ): ?>
+                    <?php
+                    
+                    $team_args = array(
+                        'post_type' => $post_type,
+                        'posts_per_page' => -1,  //show all posts
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => $taxonomy,
+                                'field' => 'slug',
+                                'terms' => $term->slug,
+                            )
+                        )
 
-    			<div class="team-row">
+                    );
 
-    				<?php while( $team_posts->have_posts() ) : $team_posts->the_post(); ?>
+                    $team_posts = new WP_Query($team_args);
 
-    				<?php $social = get_field('team_member_social_platform'); ?>
+                    if( $team_posts->have_posts() ): ?>
+                        
+                        <?php $team_posts_count = $team_posts->post_count; ?>
 
-    					<div class="team-element text-center">
-    						<div class="team-member-container">
-    							<div class="team-member-photo-container">
-    								<a href="<?php the_permalink(); ?>"><img src="<?php the_field('team_member_photo'); ?>" alt="<?php the_title(); ?>" /></a>
-    								<div class="team-member-social">
-    									<a target="_blank" href="<?php echo $social['team_social_link']; ?>" class="team-social-button">
-    										<i class="fab fa-<?php echo $social['team_social_name']; ?>"></i>
-    									</a>
-    								</div>
-    							</div>
-    							<p class="team-member-department">
-                                    <?php 
-                                        $terms = get_the_terms( $post->ID, 'team-department'); 
-                                        foreach ($terms as $term) {
-                                            echo $term->name;
-                                        }
-                                    ?>
-                                </p>
-                                <a href="<?php the_permalink(); ?>"><h3 class="team-member-name"><?php the_title(); ?></h3></a>
-    							<h3 class="team-member-title"><?php the_field('team_member_role'); ?></h3>
+                        <?php if($team_posts_count >= 2): ?>
+                            </div><!-- end team-row -->
+                            <div class="team-row">
+                        <?php endif; ?>
 
-    						</div>
-    					</div>
+                        <?php if($term->name == 'Advisors'): ?>
+                            </div><!-- end team-row -->
+                            <div class="team-row">
+                                <h2 class="section-title text-center">Advisors</h2>
+                            </div><!-- end team-row -->
+                            <div class="team-row">
+                        <?php endif; ?>
 
-    				<?php endwhile; ?>
+                            <?php while( $team_posts->have_posts() ) : $team_posts->the_post(); ?>
 
-    			</div>
+                                <?php $social = get_field('team_member_social_platform'); ?>
 
-    		<?php endif; ?>
+                                <div class="team-element text-center">
+                                    <div class="team-member-container">
+                                        <div class="team-member-photo-container">
+                                            <a href="<?php the_permalink(); ?>"><img src="<?php the_field('team_member_photo'); ?>" alt="<?php the_title(); ?>" /></a>
+                                            <div class="team-member-social">
+                                                <a target="_blank" href="<?php echo $social['team_social_link']; ?>" class="team-social-button">
+                                                    <i class="fab fa-<?php echo $social['team_social_name']; ?>"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <p class="team-member-department"><?php echo $term->name; ?></p>
+                                        <a href="<?php the_permalink(); ?>"><h3 class="team-member-name"><?php the_title(); ?></h3></a>
+                                        <h3 class="team-member-title"><?php the_field('team_member_role'); ?></h3>
+                                    </div>
+                                </div>
 
-    		<?php wp_reset_query(); ?>
+                            <?php endwhile; ?>
 
-    	</section>
+                    <?php endif; ?>
+
+                    <?php wp_reset_query(); ?>
+
+                <?php endforeach;
+
+            endforeach; ?>
+        </div><!-- end team-row -->
+
+        </section>
 
     	<section id="blog" data-magellan-target="blog">
     		<div class="row">

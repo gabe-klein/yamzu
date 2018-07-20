@@ -1601,14 +1601,8 @@ screen and (min-width:40em) {
 }
 
 .team-element {
-	flex: 0 1 20%;
+	flex: 0 1 25%;
 	padding: 0 2rem 2rem 2rem;
-}
-
-@media screen and (max-width:1424px){
-	.team-element {
-		flex: 0 1 25%;
-	}
 }
 
 @media screen and (max-width:1024px){
