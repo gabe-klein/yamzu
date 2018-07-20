@@ -25,3 +25,6 @@ menuLink.addEventListener("click", function() {
 window.FontAwesomeConfig = {
 	searchPseudoElements: true
 }
+
+// Manage 
+var paymentForm = document.querySelector(".payment-form-wrapper");
