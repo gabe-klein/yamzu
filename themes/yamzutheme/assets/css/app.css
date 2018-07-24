@@ -2409,7 +2409,7 @@ header nav .header-row ul li a.button-small:hover {
 	font-size: 72px;
 	line-height: 88px;
 	color: #e81f2a;
-	margin-top: 10rem;
+	margin-top: 4rem;
 	margin-bottom: 2rem;
 }
 
@@ -2417,7 +2417,6 @@ header nav .header-row ul li a.button-small:hover {
 	.main-heading {
 		font-size: 3rem;
 		line-height: 1.25em;
-		margin-top: 6rem;
 	}
 }
 
