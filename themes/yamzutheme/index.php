@@ -25,9 +25,9 @@
 
               <?php while( $posts->have_posts() ) : $posts->the_post(); ?>
 
-                <?php $post_counter++; ?>
+                
 
-                <?php if($post_counter % 4 == 0) : ?>
+                <?php if($post_counter %3 == 0) : ?>
                   </div>
                   <div class="row">
                 <?php endif; ?>
@@ -47,6 +47,7 @@
                 </main>
               </article>
             </div>
+              <?php $post_counter++; ?>
        
               <?php endwhile; ?>
 

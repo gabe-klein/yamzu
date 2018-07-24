@@ -2166,7 +2166,9 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
 .full-width-button {
 	text-align: center;
-	min-width: 230px;
+	min-width: 280px;
+	padding: 1rem;
+	font-size: 1.25rem;
 	margin: 1rem;
 }
 
@@ -2320,7 +2322,7 @@ html body .accept-button.disabled-default {
   border-color: #213140;
 }
 .gfield_radio input:checked + label {
-  background-color: #E81F2A;
+  background: linear-gradient(to right, #24245c 0, #24245c 11%, #e81f2a 100%);
   color: #FFF;
   border-color: #FFF;
   z-index: 1;
@@ -2357,3 +2359,54 @@ html body .accept-button.disabled-default {
 		padding: 0.5rem 0 0 0;
 	}
 }
+
+/* Gravity Form Overrides */
+
+html body .gform_wrapper .validation_error {
+	color: #e81f2a;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    border-top: 2px solid #e81f2a;
+    border-bottom: 2px solid #e81f2a;
+    padding: 1em 0;
+    clear: both;
+    width: 97.5%;
+}
+
+html body .gform_wrapper li.gfield.gfield_error {
+	background-color: transparent;
+    margin-bottom: 0!important;
+    padding: 0;
+    border-top:none;
+    border-bottom: none;
+}
+
+html body .gform_wrapper .gfield_error .gfield_label {
+	color: #e81f2a;
+}
+
+html body .gform_wrapper li.gfield_error input[type=email], 
+html body .gform_wrapper li.gfield_error input[type=number], 
+html body .gform_wrapper li.gfield_error input[type=password], 
+html body .gform_wrapper li.gfield_error input[type=tel], 
+html body .gform_wrapper li.gfield_error input[type=text], 
+html body .gform_wrapper li.gfield_error input[type=url], 
+html body .gform_wrapper li.gfield_error textarea {
+	border: 1px solid #e81f2a;
+}
+
+html body .gform_wrapper li.gfield_error div.ginput_complex.ginput_container label, 
+html body .gform_wrapper li.gfield_error ul.gfield_checkbox, 
+html body .gform_wrapper li.gfield_error ul.gfield_radio {
+	color: #e81f2a;
+}
+
+html body .gform_wrapper .validation_message {
+	color: #e81f2a;
+}
+
+
+
+
+
