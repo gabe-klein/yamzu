@@ -9,7 +9,23 @@
 		<div class="row">
 			<div class="small-12 columns text-center">
 				<!-- <img class="logo _mb20" src="assets/img/logo.png" alt="logo Yamzu"> -->
-				<h1 class="wow fadeIn" data-wow-delay="0.4s"><?php the_field('main_heading'); ?></h1>
+				<h1 class="wow fadeIn main-heading" data-wow-delay="0.4s"><?php the_field('main_heading'); ?></h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12 columns text-center">
+				<div class="sales-cta-container">
+					<?php the_field('sales_cta'); ?>
+					<div class="sales-buttons-container">
+						<?php $sales_buttons = get_field('sales_buttons'); ?>
+						<a target="_blank" class="button full-width-button" href="<?php echo $sales_buttons['eth_sales_link']; ?>">
+							<?php echo $sales_buttons['eth_sales_text']; ?>
+						</a>
+						<a class="button full-width-button" href="<?php echo $sales_buttons['other_sales_link']; ?>">
+							<?php echo $sales_buttons['other_sales_text']; ?>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="row">
@@ -60,51 +76,42 @@
 				width: <?php echo $percentage; ?>%; 
 			}
 
-		</style>
-		<div class="small-12 columns cap">
-			<div class="cap-bar-container">
-				<div class="cap-bar default-gradient-background wow increaseWidthCustom" data-wow-duration="2s" data-wow-delay="0">
-					<p class="current-amount-text"><?php echo number_format($cap_details['current_amount']); ?> €</p>
+			</style>
+				<div class="small-12 columns cap">
+					<div class="cap-bar-container">
+						<div class="cap-bar default-gradient-background wow increaseWidthCustom" data-wow-duration="2s" data-wow-delay="0">
+							<p class="current-amount-text"><?php echo number_format($cap_details['current_amount']); ?> €</p>
+						</div>
+					</div>
+
+					<div class="focus-point first wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+						<div class="line wow showLine" data-wow-duration="1s" data-wow-delay="0.6s"></div>
+						<p>
+							<strong><?php echo $cap_details['left_title']; ?></strong>
+							<?php echo number_format($cap_details['left_funds']); ?> €
+						</p>
+					</div>
+
+					<div class="focus-point second wow fadeIn" data-wow-duration="1s" data-wow-delay="1.5s">
+						<div class="line line-hard wow showLine" data-wow-duration="1s" data-wow-delay="1.4s"></div>
+						<p>
+							<strong><?php echo $cap_details['right_title']; ?></strong>
+							<?php echo number_format($cap_details['right_funds']); ?> €
+						</p>
+					</div>
 				</div>
 			</div>
+		</div>
+    </section>
 
-			<div class="focus-point first wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-				<div class="line wow showLine" data-wow-duration="1s" data-wow-delay="0.6s"></div>
-				<p>
-					<strong><?php echo $cap_details['left_title']; ?></strong>
-					<?php echo number_format($cap_details['left_funds']); ?> €
-				</p>
+    <section id="video">
+		<div class="row">
+			<div class="small-12 columns">
+				<div class="main-video-container">
+					<?php the_field('video_link'); ?>
+				</div>
 			</div>
-
-			<div class="focus-point second wow fadeIn" data-wow-duration="1s" data-wow-delay="1.5s">
-				<div class="line line-hard wow showLine" data-wow-duration="1s" data-wow-delay="1.4s"></div>
-				<p>
-					<strong><?php echo $cap_details['right_title']; ?></strong>
-					<?php echo number_format($cap_details['right_funds']); ?> €
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="row input-container">
-		<div class="small-12 large-9 columns text-left large-text-centre wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">                  
-			<div class="newsletter-wrapper">
-				<form action="https://www.getdrip.com/forms/590989739/submissions" method="post" data-drip-embedded-form="590989739" target="_blank">
-					<div class="inputs-wrapper">
-						<input type="email" id="drip-email" name="fields[email]" value="" placeholder="Email Address" />
-						<input type="submit" id="drip-submit" value="Join Whitelist Now" data-drip-attribute="sign-up-button" class="button newsletter-button" />
-						<span> and get 30% off</span>
-					</div>
-				</form>
-			</div> <!-- /.newsletter-wrapper -->
-		</div>
-		<div class="small-12 large-3 columns large-text-centre text-right wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s"> 
-			<a class="button partecipate-button" href="<?php the_field('contribute_link'); ?>" target="_blank"><?php the_field('contribute_text'); ?></a>
-		</div>
-	</div> 
-</div>
-         <!-- <a href="#highlights" class="scroll-to wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.7s">
-            <i class="fas fa-chevron-down"></i>
-        </a> -->
+        </div>
     </section>
 
     <section id="listing" data-magellan-target="listing">
@@ -417,18 +424,18 @@
     	</section>
 
     	<section id="team" data-magellan-target="team">
-    
-            <div class="particles-bg"></div>
-            
-            <div class="row">
-                <div class="small-12 columns">
-                    <h2 class="section-title text-center wow fadeIn" data-wow-duration="1s">Team</h2>
-                </div>
-            </div>
-            
-            <!-- Start custom query loop -->
-            <div class="team-row">
-            <?php
+
+    		<div class="particles-bg"></div>
+
+    		<div class="row">
+    			<div class="small-12 columns">
+    				<h2 class="section-title text-center wow fadeIn" data-wow-duration="1s">Team</h2>
+    			</div>
+    		</div>
+
+    		<!-- Start custom query loop -->
+    		<div class="team-row">
+    			<?php
 
             /*
             * Loop through Categories and Display Posts within
@@ -441,147 +448,147 @@
             foreach( $taxonomies as $taxonomy ) :
 
             // Gets every "category" (term) in this taxonomy to get the respective posts
-                $term_args = array(
-                    'orderby'    => 'slug', 
-                    'order'      => 'ASC',
-                );
-                $terms = get_terms( $taxonomy, $term_args );
+            	$term_args = array(
+            		'orderby'    => 'slug', 
+            		'order'      => 'ASC',
+            	);
+            	$terms = get_terms( $taxonomy, $term_args );
 
-                foreach( $terms as $term ) : ?>
+            	foreach( $terms as $term ) : ?>
 
-                    <?php
-                    
-                    $team_args = array(
-                        'post_type' => $post_type,
+            		<?php
+
+            		$team_args = array(
+            			'post_type' => $post_type,
                         'posts_per_page' => -1,  //show all posts
                         'tax_query' => array(
-                            array(
-                                'taxonomy' => $taxonomy,
-                                'field' => 'slug',
-                                'terms' => $term->slug,
-                            )
+                        	array(
+                        		'taxonomy' => $taxonomy,
+                        		'field' => 'slug',
+                        		'terms' => $term->slug,
+                        	)
                         )
 
                     );
 
-                    $team_posts = new WP_Query($team_args);
+            		$team_posts = new WP_Query($team_args);
 
-                    if( $team_posts->have_posts() ): ?>
-                        
-                        <?php $team_posts_count = $team_posts->post_count; ?>
+            		if( $team_posts->have_posts() ): ?>
 
-                        <?php if($team_posts_count >= 2): ?>
-                            </div><!-- end team-row -->
-                            <div class="team-row">
-                        <?php endif; ?>
+            			<?php $team_posts_count = $team_posts->post_count; ?>
 
-                        <?php if($term->name == 'Advisors'): ?>
-                            </div><!-- end team-row -->
-                            <div class="team-row">
-                                <h2 class="section-title text-center">Advisors</h2>
-                            </div><!-- end team-row -->
-                            <div class="team-row">
-                        <?php endif; ?>
+            			<?php if($team_posts_count >= 2): ?>
+            			</div><!-- end team-row -->
+            			<div class="team-row">
+            			<?php endif; ?>
 
-                            <?php while( $team_posts->have_posts() ) : $team_posts->the_post(); ?>
+            			<?php if($term->name == 'Advisors'): ?>
+            			</div><!-- end team-row -->
+            			<div class="team-row">
+            				<h2 class="section-title text-center">Advisors</h2>
+            			</div><!-- end team-row -->
+            			<div class="team-row">
+            			<?php endif; ?>
 
-                                <?php $social = get_field('team_member_social_platform'); ?>
+            			<?php while( $team_posts->have_posts() ) : $team_posts->the_post(); ?>
 
-                                <div class="team-element text-center">
-                                    <div class="team-member-container">
-                                        <div class="team-member-photo-container">
-                                            <a href="<?php the_permalink(); ?>"><img src="<?php the_field('team_member_photo'); ?>" alt="<?php the_title(); ?>" /></a>
-                                            <div class="team-member-social">
-                                                <a target="_blank" href="<?php echo $social['team_social_link']; ?>" class="team-social-button">
-                                                    <i class="fab fa-<?php echo $social['team_social_name']; ?>"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <p class="team-member-department"><?php echo $term->name; ?></p>
-                                        <a href="<?php the_permalink(); ?>"><h3 class="team-member-name"><?php the_title(); ?></h3></a>
-                                        <h3 class="team-member-title"><?php the_field('team_member_role'); ?></h3>
-                                    </div>
-                                </div>
+            				<?php $social = get_field('team_member_social_platform'); ?>
 
-                            <?php endwhile; ?>
+            				<div class="team-element text-center">
+            					<div class="team-member-container">
+            						<div class="team-member-photo-container">
+            							<a href="<?php the_permalink(); ?>"><img src="<?php the_field('team_member_photo'); ?>" alt="<?php the_title(); ?>" /></a>
+            							<div class="team-member-social">
+            								<a target="_blank" href="<?php echo $social['team_social_link']; ?>" class="team-social-button">
+            									<i class="fab fa-<?php echo $social['team_social_name']; ?>"></i>
+            								</a>
+            							</div>
+            						</div>
+            						<p class="team-member-department"><?php echo $term->name; ?></p>
+            						<a href="<?php the_permalink(); ?>"><h3 class="team-member-name"><?php the_title(); ?></h3></a>
+            						<h3 class="team-member-title"><?php the_field('team_member_role'); ?></h3>
+            					</div>
+            				</div>
 
-                    <?php endif; ?>
+            			<?php endwhile; ?>
 
-                    <?php wp_reset_query(); ?>
+            		<?php endif; ?>
 
-                <?php endforeach;
+            		<?php wp_reset_query(); ?>
+
+            	<?php endforeach;
 
             endforeach; ?>
         </div><!-- end team-row -->
 
-        </section>
+    </section>
 
-    	<section id="blog" data-magellan-target="blog">
+    <section id="blog" data-magellan-target="blog">
+    	<div class="row">
+    		<div class="small-12 columns">
+    			<h2 class="section-title text-center wow fadeIn" data-wow-duration="1s">Blog</h2>
+    		</div>
+    	</div>
+
+    	<div class="row">
+
+    		<?php	
+    		$args = array(
+    			'post_type' => 'post',
+    			'posts_per_page' => 6
+    		);
+
+    		$posts = new WP_Query($args);
+
+    		if( $posts->have_posts() ): ?>
+
+    			<div class="row">
+
+    				<?php $post_counter = 0; ?>
+
+    				<?php while( $posts->have_posts() ) : $posts->the_post(); ?>
+
+    					<?php $post_counter++; ?>
+
+    					<?php if($post_counter % 4 == 0) : ?>
+    					</div>
+    					<div class="row">
+    					<?php endif; ?>
+
+    					<div class="small-12 medium-4 columns blog-section">
+    						<article class="blog-preview">
+    							<div class="article-header">
+    								<a href="<?php the_permalink(); ?>">
+    									<div class="blog-featured-image" style="background-image: url(<?php echo the_post_thumbnail_url('medium'); ?>)"></div>
+    								</a>
+    								<div class="blog-title-container">
+    									<a href="<?php the_permalink(); ?>"><h4 class="blog-preview-title"><?php the_title(); ?></h4></a>
+    								</div>
+    							</div>
+    							<main class="blog-preview-excerpt">
+    								<p><?php the_excerpt(); ?></p>
+    							</main>
+    						</article>
+    					</div>
+
+    				<?php endwhile; ?>
+
+    			</div>
+
+    		<?php endif; ?>
+
+    		<?php wp_reset_query(); ?>	
+
     		<div class="row">
-    			<div class="small-12 columns">
-    				<h2 class="section-title text-center wow fadeIn" data-wow-duration="1s">Blog</h2>
+    			<div class="small-12 columns text-center">
+    				<button class="button newsletter-button">
+    					<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
+    						View More
+    					</a>
+    				</button>
     			</div>
     		</div>
 
-    		<div class="row">
+    	</section>
 
-    			<?php	
-    			$args = array(
-    				'post_type' => 'post',
-    				'posts_per_page' => 6
-    			);
-
-    			$posts = new WP_Query($args);
-
-    			if( $posts->have_posts() ): ?>
-
-    				<div class="row">
-
-    					<?php $post_counter = 0; ?>
-
-    					<?php while( $posts->have_posts() ) : $posts->the_post(); ?>
-
-    						<?php $post_counter++; ?>
-
-    						<?php if($post_counter % 4 == 0) : ?>
-    						</div>
-    						<div class="row">
-    						<?php endif; ?>
-
-    						<div class="small-12 medium-4 columns blog-section">
-    							<article class="blog-preview">
-    								<div class="article-header">
-    									<a href="<?php the_permalink(); ?>">
-    										<div class="blog-featured-image" style="background-image: url(<?php echo the_post_thumbnail_url('medium'); ?>)"></div>
-    									</a>
-    									<div class="blog-title-container">
-    										<a href="<?php the_permalink(); ?>"><h4 class="blog-preview-title"><?php the_title(); ?></h4></a>
-    									</div>
-    								</div>
-    								<main class="blog-preview-excerpt">
-    									<p><?php the_excerpt(); ?></p>
-    								</main>
-    							</article>
-    						</div>
-
-    					<?php endwhile; ?>
-
-    				</div>
-
-    			<?php endif; ?>
-
-    			<?php wp_reset_query(); ?>	
-
-    			<div class="row">
-    				<div class="small-12 columns text-center">
-    					<button class="button newsletter-button">
-    						<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
-    							View More
-    						</a>
-    					</button>
-    				</div>
-    			</div>
-
-    		</section>
-
-    		<?php get_footer(); ?>
+    	<?php get_footer(); ?>

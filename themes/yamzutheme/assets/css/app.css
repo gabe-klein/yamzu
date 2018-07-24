@@ -700,13 +700,6 @@ screen and (min-width:40em) {
  }
 }
 
-#market-overview .market-overview-content h1 {
- text-align: center;
- margin-bottom: 40px;
- margin-top: 20vh;
- color: #e81f2a;
-}
-
 #market-overview .market-overview-content .ico-info {
  font-size: 14px;
  margin-bottom: 0;
@@ -866,7 +859,7 @@ screen and (min-width:40em) {
 @media screen and (min-width: 40em) {
 
 	#market-overview .market-overview-content .countdown {
- 		height: 180px;
+ 		height: 130px;
 	}
 
 	#market-overview .market-overview-content .countdown span:not(.separator) {
@@ -887,29 +880,7 @@ screen and (min-width:40em) {
 
 }
 
-@media screen and (min-width: 62em) {
 
-	#market-overview .market-overview-content .countdown {
- 		height: 300px;
-	}
-
-	#market-overview .market-overview-content .countdown span:not(.separator) {
-		font-size: 140px;
-		width: 180px;
-	}
-
-	#market-overview .market-overview-content .countdown span:not(.separator) .label {
-		font-size: 24px;
-	}
-
-	#market-overview .market-overview-content .countdown .separator {
-		top: -82px;
-		font-size: 140px;
-		padding: 0 8px;
-		letter-spacing: 0;
-	}
-
-}
 
 #market-overview .input-container {
 	margin-top: 90px;
@@ -2173,8 +2144,6 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .full-width-button {
 	text-align: center;
 	min-width: 280px;
-	padding: 1rem;
-	font-size: 1.25rem;
 	margin: 1rem;
 }
 
@@ -2434,6 +2403,63 @@ header nav .header-row ul li a.button-small:hover {
 	color: #fff;
 }
 
+/* New Home Page Styles */
 
+.main-heading {
+	font-size: 72px;
+	line-height: 88px;
+	color: #e81f2a;
+	margin-top: 6rem;
+	margin-bottom: 2rem;
+}
 
+@media screen and (max-width: 62rem){
+	.main-heading {
+		font-size: 3rem;
+		line-height: 1.25em;
+	}
+}
+
+@media screen and (max-width: 50rem){
+	.main-heading {
+		font-size: 2rem;
+		line-height: 1.25em;
+	}
+}
+
+.animated-span {
+	display: inline-block;
+	color: #e81f2a;
+}
+
+.sales-cta-container {
+	margin: 2rem 0 4rem;
+}
+
+/* Video Section */
+
+.main-video-container {
+	position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    margin: 8rem 4rem 4rem 4rem;
+}
+
+@media screen and (max-width: 62rem){
+	.main-video-container {
+		position: relative;
+	    overflow: hidden;
+	    padding-top: 56.25%;
+	    margin: 8rem 1rem 2rem 1rem;
+	}
+}
+
+.main-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 
