@@ -33,6 +33,11 @@
               <li><a href="#token-distribution">Token</a></li>
 				      <li><a href="#team">Team</a></li>
               <li><a href="#blog">Blog</a></li>
+              <?php
+                $yamzu_link = get_field('yamzu_platform_link', 'option');
+                if($yamzu_link): ?> 
+                <li><a target="_blank" class="button button-small" href="<?php echo $yamzu_link['link']; ?>"><?php echo $yamzu_link['link_text']; ?></a></li>
+              <?php endif; ?>
      				</ul>
 
             

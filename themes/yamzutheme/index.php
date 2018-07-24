@@ -16,7 +16,7 @@
 	);
 
 	$posts = new WP_Query($args);
-	
+
 	if( $posts->have_posts() ): ?>
 
 		<div class="row">
@@ -25,13 +25,11 @@
 
 			<?php while( $posts->have_posts() ) : $posts->the_post(); ?>
 
-				
-
 				<?php if($post_counter %3 == 0) : ?>
 				</div>
 				<div class="row">
 				<?php endif; ?>
-				
+
 				<div class="small-12 medium-4 columns">
 					<article class="blog-preview">
 						<div class="article-header">
@@ -48,7 +46,7 @@
 					</article>
 				</div>
 				<?php $post_counter++; ?>
-				
+
 			<?php endwhile; ?>
 
 		</div>

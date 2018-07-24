@@ -468,11 +468,17 @@ header nav .header-row ul li {
 header nav .header-row ul li a {
  font-weight: 700;
  color: #fff;
- margin-left: 20px;
+ margin-left: 0px;
  transition: .3s;
  width: auto;
  display: block;
  font-size: 14px
+}
+
+@media screen and (min-width:64em) {
+ header nav .header-row ul li a {
+	 margin-left: 20px;
+ }
 }
 
 @media screen and (min-width:75em) {
@@ -2406,6 +2412,27 @@ html body .gform_wrapper .validation_message {
 	color: #e81f2a;
 }
 
+/* Play button in menu */
+
+.button.button-small {
+	padding: 0.5rem 1rem;
+	border-radius: 40px;
+}
+
+@media screen and (max-width:64em) {
+	.button.button-small {
+		max-width: 200px;
+		margin: 0 auto;
+	}
+}
+
+header nav .header-row ul li a.button-small:after {
+	display: none;
+}
+
+header nav .header-row ul li a.button-small:hover {
+	color: #fff;
+}
 
 
 

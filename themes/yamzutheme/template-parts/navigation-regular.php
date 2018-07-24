@@ -22,6 +22,7 @@
             </div>
 
             <ul data-magellan class="site-links">
+              
               <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#listing">Listings</a></li>
               <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#partners">Partners</a></li>
               <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#press">Press</a></li>
@@ -30,6 +31,11 @@
               <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#token-distribution">Token</a></li>
 				      <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#team">Team</a></li>
               <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#blog">Blog</a></li>
+              <?php
+                $yamzu_link = get_field('yamzu_platform_link', 'option');
+                if($yamzu_link): ?> 
+                <li><a target="_blank" class="button button-small" href="<?php echo $yamzu_link['link']; ?>"><?php echo $yamzu_link['link_text']; ?></a></li>
+              <?php endif; ?>
      				</ul>
 
             <?php if( have_rows('platform_links', 'option') ): ?>
