@@ -823,7 +823,14 @@ screen and (min-width:40em) {
 
 #market-overview .market-overview-content .countdown_title {
  position: relative;
- margin-bottom: 5px
+ margin-bottom: 5px;
+ margin-top: 2.5rem;
+}
+
+@media screen and (max-width: 1180px){
+	#market-overview .market-overview-content .countdown_title {
+	 margin-top: 7rem;
+	}
 }
 
 #market-overview .market-overview-content .countdown {
@@ -2409,7 +2416,7 @@ header nav .header-row ul li a.button-small:hover {
 	font-size: 72px;
 	line-height: 88px;
 	color: #e81f2a;
-	margin-top: 4rem;
+	margin-top: 7rem;
 	margin-bottom: 2rem;
 }
 
@@ -2433,13 +2440,13 @@ header nav .header-row ul li a.button-small:hover {
 }
 
 .sales-cta-container {
-	margin: 2rem 0 4rem;
+	margin: 2rem 0 2rem;
 }
 
 /* Video Section */
 
 section#video {
-	margin-top: 8rem;
+	margin-top: 2rem;
 }
 
 .main-video-container {

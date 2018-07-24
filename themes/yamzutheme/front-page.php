@@ -29,12 +29,6 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="small-12 columns text-center wow fadeIn" data-wow-delay="1s">
-				<h3 class="countdown_title"><?php the_field('countdown_heading'); ?></h3> 
-				<div class="countdown" data-countdown="<?php the_field('expiry_date'); ?>"></div>
-			</div>
-		</div>
-		<div class="row">
 			<div class="columns small-12 large-text-right">
 				<div class="ico-info">
 					<p class="wow fadeIn" data-wow-delay="0.4s">
@@ -99,6 +93,12 @@
 							<?php echo number_format($cap_details['right_funds']); ?> €
 						</p>
 					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 columns text-center wow fadeIn" data-wow-delay="1s">
+					<h3 class="countdown_title"><?php the_field('countdown_heading'); ?></h3> 
+					<div class="countdown" data-countdown="<?php the_field('expiry_date'); ?>"></div>
 				</div>
 			</div>
 		</div>
