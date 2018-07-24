@@ -12,7 +12,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="columns small-12">
 				<h2><?php the_field('payment_instruction_title'); ?></h2>
-
+				<p><?php the_field('payment_instruction_subtitle'); ?></p>
 				<main>
 					<?php the_field('payment_instruction_form'); ?>
 				</main>

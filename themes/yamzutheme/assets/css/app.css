@@ -2209,7 +2209,7 @@ html body .accept-button.disabled-default {
 
 .payment-form-wrapper {
 	min-height: 70vh;
-	padding: 4rem 8rem;
+	padding: 8rem 8rem 4rem 8rem;
 }
 
 @media screen and (max-width: 60rem){
@@ -2439,19 +2439,22 @@ header nav .header-row ul li a.button-small:hover {
 
 /* Video Section */
 
+section#video {
+	margin-top: 8rem;
+}
+
 .main-video-container {
 	position: relative;
     overflow: hidden;
-    padding-top: 56.25%;
-    margin: 8rem 4rem 4rem 4rem;
+    padding-top: 50%;
+    margin: 4rem 4rem 0 4rem;
 }
 
 @media screen and (max-width: 62rem){
 	.main-video-container {
 		position: relative;
 	    overflow: hidden;
-	    padding-top: 56.25%;
-	    margin: 8rem 1rem 2rem 1rem;
+	    margin: 4rem 1rem 0 1rem;
 	}
 }
 

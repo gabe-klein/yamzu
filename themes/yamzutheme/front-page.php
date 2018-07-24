@@ -105,6 +105,11 @@
     </section>
 
     <section id="video">
+    	<div class="row">
+    		<div class="small-12 columns">
+    			<h2 class="section-title text-center wow fadeIn" data-wow-duration="1s"><?php the_field('video_title'); ?></h2>
+    		</div>
+    	</div>
 		<div class="row">
 			<div class="small-12 columns">
 				<div class="main-video-container">
@@ -117,7 +122,7 @@
     <section id="listing" data-magellan-target="listing">
     	<div class="row">
     		<div class="small-12 columns">
-    			<h2 class="section-title text-center wow fadeIn" data-wow-duration="1s">Listing</h2>
+    			<h2 class="section-title text-center wow fadeIn" data-wow-duration="1s">Listings</h2>
     		</div>
     	</div>
 
